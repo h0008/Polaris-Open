@@ -7,8 +7,8 @@
   
   "enableWebServer": true,
   "serverPort": 10000,
-  "siteURL": "https://polaris-open.onrender.com/",
+  "siteURL": "https://polaris-open.onrender.com",
   
-  "changelogURL": "https://polaris-open.onrender.com/",
+  "changelogURL": "https://polaris-open.onrender.com",
   "supportURL": ""
 }
