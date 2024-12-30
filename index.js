@@ -132,3 +132,19 @@ process.on('uncaughtException', e => console.warn(e))
 process.on('unhandledRejection', (e, p) => console.warn(e))
 
 client.login(process.env.DISCORD_TOKEN)
+    // keep alive
+const url = `https://polaris-open.onrender.com/`; // Replace with your Render URL
+const interval = 30000; // Interval in milliseconds (30 seconds)
+
+function reloadWebsite() {
+  axios.get(url)
+    .then(response => {
+      console.log(`Reloaded at ${new Date().toISOString()}: Status Code ${response.status}`);
+    })
+    .catch(error => {
+      console.error(`Error reloading at ${new Date().toISOString()}:`, error.message);
+    });
+}
+
+
+setInterval(reloadWebsite, interval);
