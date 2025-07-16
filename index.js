@@ -1,3 +1,4 @@
+const axios = require('axios')
 const Discord = require("discord.js")
 const fs = require("fs")
 
@@ -134,7 +135,7 @@ process.on('unhandledRejection', (e, p) => console.warn(e))
 client.login(process.env.DISCORD_TOKEN)
     // pinging the server every 10 minutes to keep the app online
 const url = `https://polaris-open.onrender.com/`; // Replace with your Render URL
-const interval = 600000; // Interval in milliseconds (30 seconds)
+const interval = 600000; // Interval in milliseconds (10 minutes)
 
 function reloadWebsite() {
   axios.get(url)
